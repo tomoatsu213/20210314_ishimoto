@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" class="header-left">estra inc.</a>
+      <nav class="nav">
+        <ul class="nav-items">
+          <li>
+            <a href="index.html" class="nav-item">Home</a>
+          </li>
+          <li>
+            <a href="service.html" class="nav-item">About</a>
+          </li>
+          <li>
+            <a href="news.html" class="nav-item">Service</a>
+          </li>
+          <li>
+            <a href="blog.html" class="nav-item">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="hamburger" id="js-hamburger">
+        <span class="hamburger_line hamburger_line-1"></span>
+        <span class="hamburger_line hamburger_line-2"></span>
+        <span class="hamburger_line hamburger_line-3"></span>
+      </div>
+      <div class="white-bg" id="js-white-bg"></div>
+    </header>
+
+    <section class="top">
+      <div>
+        <div class="top-right">
+          <img src="./img/firstview.jpeg" alt="top-right" width="100%" height="auto" />
+        </div>
+        <div class="top-left">
+          <h1>毎日を笑顔に</h1>
+          <p></p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+          function toggleNav() {
+        var body = document.body;
+        var hamburger = document.getElementById("js-hamburger");
+        var whiteBg = document.getElementById("js-white-bg");
+
+        hamburger.addEventListener("click", function () {
+          body.classList.toggle("nav-open");
+        });
+        whiteBg.addEventListener("click", function () {
+          body.classList.remove("nav-open");
+        });
+      }
+      toggleNav();
+    </script>
+  </body>
+</html>
